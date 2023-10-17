@@ -13,7 +13,9 @@ var infoCardAnimOne = document.querySelector('.ic1');
 var infoCardAnimTwo = document.querySelector('.ic2');
 var infoCardAnimThree = document.querySelector('.ic3');
 
-
+function displayMessage (message){
+    return suggestText.innerHTML = message;
+}
 
 getStart.addEventListener('click', () =>{
     welcomePage.style.display = 'none';
@@ -64,22 +66,21 @@ submitNumber.addEventListener('click', () => {
 
         randomNumber = Math.trunc(Math.random() * 10 + 2);
         suggestText.style.color = "#4cff5f"
-        suggestText.innerHTML = `Yeeee You did a <br> great Job!`
+        displayMessage ("Yeeee You did a <br> great Job!");
         suggestText.style.color = "#FF7474"
-        //setInterval(function() {suggestText.innerHTML = "Let's Do it Again"}, 3000);
         inputNumber.innerHTML = '';
-        // console.log("This is the new random number" + randomNumber, "Moves left = ");
     } else {
         movesValue -= 1;
         checkMoves.innerHTML = movesValue;
-        suggestText.innerHTML = `Opps this is a wrong Answer.`;
+        displayMessage ("Opps this is a wrong Answer.");
+        
         infoCardAnimTwo.classList.add('infoCardAnim');
         setInterval(function() {
             infoCardAnimTwo.classList.remove('infoCardAnim');
-            suggestText.innerHTML = `Try Again`;
+            displayMessage ("Try Again");
         }, 3000);
         setInterval(function() {
-            suggestText.innerHTML = `Try Again`;
+            displayMessage ("Try Again!");
         }, 5000);
     }
 
@@ -98,7 +99,7 @@ submitNumber.addEventListener('click', () => {
         checkRound.innerHTML = roundValue;
         checkScore.innerHTML = scoreValue;
         checkMoves.innerHTML = movesValue;
-        suggestText.innerHTML = `The answer was <br> <b>${randomNumber}<b>`
+        displayMessage (`The answer was <br> <b>${randomNumber}<b>`);
         setInterval(function() {suggestText.innerHTML = "Let's try again"}, 4000);
         randomNumber = Math.trunc(Math.random() * 10 + 3);
     }
@@ -112,7 +113,7 @@ resetButton.addEventListener('click', () => {
     checkRound.innerHTML = roundValue;
     checkScore.innerHTML = scoreValue;
     checkMoves.innerHTML = movesValue;
-    suggestText.innerHTML = `New Round <br> Started`;
+    displayMessage (`New Round <br> Started`);
     infoCardAnimOne.classList.add('infoCardAnim');
     infoCardAnimTwo.classList.add('infoCardAnim');
     infoCardAnimThree.classList.add('infoCardAnim');
