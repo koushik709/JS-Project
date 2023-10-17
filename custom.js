@@ -125,7 +125,7 @@ resetButton.addEventListener('click', () => {
 
 
 function checkHint (x) {
-    x.innerHTML = `Try between 1 to 10`;
+    x.innerHTML = `Try between 0 to 10`;
 }
 
 function checkHintDone(x){
