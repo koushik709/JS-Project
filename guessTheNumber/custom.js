@@ -22,7 +22,7 @@ getStart.addEventListener('click', () =>{
     gamePage.style.display = 'block';
 });
 
-var randomNumber = Math.trunc(Math.random());
+var randomNumber = Math.trunc(Math.random()*10) + 1;
 console.log(randomNumber);
 
 let scoreValue = 0;
