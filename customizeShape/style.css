@@ -1,0 +1,90 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+a{
+    text-decoration: none;
+}
+
+ul li{
+    list-style: none;
+}
+
+body {
+    background-color: #e4e8ea !important;
+}
+
+.shapeMenubar{
+    background-color: #fff;
+    height: 85vh;
+    border-radius: 10px;
+    position: relative;
+}
+.menuContent {
+    max-height: 75vh;
+    overflow-y: scroll;
+}
+
+.shapeHeader{
+    background-color: #fff;
+    border-radius: 10px;
+}
+.shapeHeader h3{
+    font-size: 18px;
+    color: #202020;
+}
+.confirmButtons {
+    position: absolute;
+    bottom: 10px;
+    width: 90%;
+    left: 10px;
+}
+
+.displayBody {
+    background-color: #fff;
+    height: 80vh;
+    border-radius: 10px;
+    overflow: auto;
+}
+
+.CustomizeMe {
+    background-color: rgb(0, 48, 48);
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+    color: white;
+}
+
+.cssAvailable {
+    background-color: #fff;
+    height: 80vh;
+    border-radius: 10px;
+    overflow: hidden;
+    overflow-y: auto;
+}
+
+.cssAvailable h6 {
+    background-color: #02131e;
+    color: rgb(208, 232, 255);
+    padding: 15px;
+    position: relative;
+}
+.cssAvailable h6 svg {
+    position: absolute;
+    bottom: -25px;
+    right: 10px;
+    color: #003558;
+    cursor: pointer;
+}
+.cssAvailable p {
+    color: #001222;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 24px;
+    order: 1px dotted #ccc;
+}
