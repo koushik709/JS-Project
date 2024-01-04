@@ -1,0 +1,120 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+a{
+    text-decoration: none;
+}
+ul li{
+    list-style: none;
+}
+
+body{
+    background-color: rgb(172, 255, 200);
+}
+
+.weather {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    /* height: 150px; */
+    padding-top: 15px;
+    padding-bottom: 30px;
+    gap: 5px;
+    overflow: hidden;
+
+}
+
+
+
+input{
+    border: 1px solid rgb(164, 164, 164);
+    height: 30px;
+    border-radius: 4px;
+    background-color: #ffffffda;
+    color: rgb(1, 26, 8);
+    padding-left: 15px;
+}
+
+input:focus{
+    border: none;
+    stroke: none;
+    outline: none;
+    color: white;
+    background-color: rgb(1, 21, 5);
+}
+
+button{
+    border: none;
+    padding: 8px 18px;
+    border-radius: 5px;
+    color: white;
+    cursor: Pointer;
+    background-color: rgb(3, 52, 35);
+}
+
+.weatherDetails {
+    display: flex;
+    justify-content: center;
+}
+
+.weatherBody{
+    display: flex;
+    justify-content: center;
+    width: 400px;
+    /* height: auto; */
+    padding: 20px;
+    flex-direction: column;
+
+    
+
+    /* text-align: center; */
+    border-radius: 10px;
+    align-items: center;
+    background: linear-gradient(142deg, #dbff6e 0%, #306d3a 100%);
+}
+.animate {
+    height: 0px;
+    animation: 0.3s bodyAnimate;
+    animation-iteration-count: normal;
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
+}
+@keyframes bodyAnimate {
+    0%{
+        height: auto;
+    }
+    100%{
+        height: auto;
+    }
+}
+
+
+.weatherBody img{
+    width: 100px;
+    height: auto;
+}
+.weatherBody h1{
+    padding-top: 20px;
+    font-size: 48px;
+    color: #fff;
+    line-height: 60px;
+}
+
+.weatherBody h2{
+    color: white;
+}
+
+.otherDetails {
+    margin-top: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    color: white;
+}
+
+.hidden {
+    display: none;
+}

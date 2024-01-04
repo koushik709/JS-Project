@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<body>
+<style>
+.btnStyle .btn {
+    font-size: 13px;
+    background: #fde1c0;
+    color: #333;
+}
+.btnStyle .btn.active {
+    font-weight: 600;
+    background: #f8951e !important;
+    color: #fff;
+}</style>
+<div class="d-flex align-items-end mt-3 flex-wrap flex-sm-nowrap gap-2 btnStyle w-30">
+								<a href="javascript:;" class="btn btn-xs yearly_btn flex-fill topStatModalButton py-2" duration="yearly">Year</a>
+								<a href="javascript:;" class="btn btn-xs weekly_btn flex-fill topStatModalButton py-2" duration="weekly">Week</a>
+
+<script>
+let topStatModalButton = document.querySelectorAll('.topStatModalButton');
+for(let i = 0; i<topStatModalButton.length; i++) {
+    topStatModalButton[i].addEventListener('click', ()=> {
+        for(let j = 0; j<topStatModalButton.length; j++){
+            topStatModalButton[j].classList.remove('active');
+        }
+        topStatModalButton[i].classList.add('active');
+        console.log(i);
+    });
+}
+</script>
+
+</body>
+</html>
