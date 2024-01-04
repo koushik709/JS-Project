@@ -47,7 +47,7 @@ body {
 
 .displayBody {
     background-color: #fff;
-    height: 80vh;
+    height: 85vh;
     border-radius: 10px;
     overflow: auto;
 }
@@ -62,7 +62,7 @@ body {
 
 .cssAvailable {
     background-color: #fff;
-    height: 80vh;
+    height: 85vh;
     border-radius: 10px;
     overflow: hidden;
     overflow-y: auto;
