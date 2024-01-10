@@ -1,6 +1,3 @@
-/* <input type="text" class="inputName" placeholder="Type your full name">
-<button type="button" class="generate">Generate</button> */
-
 const inputName = document.querySelector('.inputName');
 const generate = document.querySelector('.generate');
 
