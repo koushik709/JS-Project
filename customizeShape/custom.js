@@ -49,9 +49,21 @@ document.getElementById('copyText').addEventListener('click', function(){
 //alert('Text Copied');
 
 
+document.getElementById('resetShape').addEventListener('click', () => {
+    document.querySelector('.confirmReset').classList.remove('hidden');
+});
+
+document.querySelector('.confirmResetButton').addEventListener('click', ()=>{
+    setTimeout(function(){
+        location.reload();
+    }, 500);
+});
+document.querySelector('.rejectResetButton').addEventListener('click', ()=>{
+    document.querySelector('.confirmReset').classList.add('hidden');
+});
 
 
-
-
+// confirmResetButton btn btn-sm btn-primary">Yes, I Want</button>
+//             <button type="button" class="rejectResetButton
 
 
