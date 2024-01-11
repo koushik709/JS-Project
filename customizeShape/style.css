@@ -84,10 +84,9 @@ body {
 }
 .cssAvailable p {
     color: #001222;
-    font-size: 14px;
-    font-weight: 600;
+    font-size: 12px;
+    font-weight: 500;
     line-height: 24px;
-    order: 1px dotted #ccc;
 }
 
 .confirmReset{

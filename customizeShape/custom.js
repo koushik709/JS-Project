@@ -25,12 +25,12 @@ function shape(){
     mainShape.style.boxShadow = `${shadowX.value}px ${shadowY.value}px ${shadowBlur.value}px ${shadowColor.value}`;
     
     cssContent.innerHTML =
-    `background-color: ${fillColor.value} <br>
-    width: ${shapeWidth.value}px <br>
-    height: ${shapeHeight.value}px <br>
-    border-radius: ${shapeRadius.value}px <br>
-    box-shadow: ${shadowX.value}px ${shadowY.value}px ${shadowBlur.value}px ${shadowColor.value} <br>
-    border: ${borderSize.value} ${borderStyle.value} ${borderColor.value} <br>
+    `background-color: ${fillColor.value}; <br>
+    width: ${shapeWidth.value}px; <br>
+    height: ${shapeHeight.value}px; <br>
+    border-radius: ${shapeRadius.value}px; <br>
+    box-shadow: ${shadowX.value}px ${shadowY.value}px ${shadowBlur.value}px ${shadowColor.value}; <br>
+    border: ${borderSize.value} ${borderStyle.value} ${borderColor.value}; <br>
     `;
 }
 
