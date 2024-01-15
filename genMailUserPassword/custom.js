@@ -5,6 +5,9 @@ generate.addEventListener('click', function(){
     let inputValue = inputName.value;
     if(inputValue === ""){
         alert('Please type something');
+        setTimeout(function(){
+            location.reload();
+        }, 500);
     } else {
         const inputText = inputValue.toLowerCase().split(" ");
         const UserNumber = Math.floor(Math.random(10)*123);

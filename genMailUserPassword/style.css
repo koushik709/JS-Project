@@ -5,6 +5,7 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    font-family: 'poppins', sans-serif;
 }
 
 a{
@@ -17,6 +18,7 @@ ul li{
 
 body {
     background-color: #e4e8ea !important;
+    position: relative;
 }
 
 .hidden{
@@ -28,11 +30,16 @@ body {
     width: 400px;
     border-radius: 10px;
 }
+
+.mainBody {
+    /* width: 900px;
+    height: auto; */
+}
 .inputName{
     outline: none;
     stroke: none;
     border: none;
-    background-color: rgb(223, 230, 237);
+    background-color: rgb(223, 230, 237) !important;
     padding: 5px;
     border-radius: 5px;
     padding-left: 15px;
@@ -44,4 +51,25 @@ body {
     border-radius: 5px;
     background-color: rgb(56, 82, 162);
     color: white;
+}
+
+
+.bgStyle {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    overflow: hidden;
+    z-index: -1;
+}
+.bgStyle div {
+    width: 40px;
+    height: 40px;
+    background-color: #e4e8ea;
+    border: 1px solid #efefef;
+    transition: .3s;
+}
+
+.bgStyle div:hover {
+    background-color: rgb(10, 0, 30);
 }
