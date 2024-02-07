@@ -24,6 +24,10 @@ h1, h2, h3, h4, h5, h6, p{
 body{
     background-color: rgb(227, 232, 238);
 }
+
+.hidden{
+    display: none;
+}
 .divWidth {
     max-width: 350px;
 }
