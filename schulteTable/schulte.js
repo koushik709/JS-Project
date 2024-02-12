@@ -43,9 +43,11 @@ const resultGame = ()=>{
     resultBG.classList.contains('hidden')? resultBG.classList.remove('hidden'): resultBG.classList.add('hidden');
     resultDiv.classList.contains('hidden')? resultDiv.classList.remove('hidden'): resultDiv.classList.add('hidden');;
 }
+let myTime;
 const countStart = ()=> {
+    clearInterval(myTime);
     let x = 30;
-    let myTime = setInterval(() => {
+    myTime = setInterval(() => {
         x--;
         if(x<10){
             countDown.innerHTML = `0${x}`;
@@ -62,6 +64,7 @@ const countStart = ()=> {
     //myTime();
 }
 newGame.onclick = function(){
+    countDown.innerHTML = `30`;
     newGameFun();
     countStart();
 }

@@ -27,3 +27,63 @@ body{
 .hidden{
     display: none !important;
 }
+
+.playGameDiv{
+    background-color: rgb(35, 35, 35);
+    height: 100vh;
+    width: 100%;
+    animation: bgColor 3.3s infinite ease-in-out;
+}
+@keyframes bgColor {
+    0% {
+        background: linear-gradient(325deg, rgba(0,50,102,1) 0%, rgb(20, 0, 62) 51%, rgb(30, 0, 255) 100%);
+    }
+    100% {
+        background: linear-gradient(325deg, rgb(1, 0, 37) 0%, rgb(4, 0, 41) 51%, rgb(0, 38, 79) 100%);
+    }
+}
+.scrulteDiv{
+    height: 100vh;
+}
+.scrulteDiv table{
+    max-width: 400px;
+}
+.yl{
+    color: rgb(198, 182, 0);
+}
+.gn{
+    color: rgb(11, 228, 0);
+}
+.rd{
+    color: rgb(255, 0, 0);
+}
+.cy{
+    color: rgb(39, 39, 39);
+}
+.bl{
+    color: rgb(0, 149, 255);
+}
+.infoIcon{
+    font-size: 16px;
+    color: rgb(255, 149, 149);
+}
+.resultBG{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.41);
+    filter: blur(.2);
+}
+.resultDiv{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    background-color: rgb(0, 4, 47);
+    border-radius: 5px;
+    color: white;
+}
