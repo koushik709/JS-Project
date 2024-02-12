@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Schulte Game</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jsmediatags/3.9.5/jsmediatags.min.js"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="schulte.css">
+    <style>
+        .playGameDiv{
+            background-color: rgb(35, 35, 35);
+            height: 100vh;
+            width: 100%;
+            animation: bgColor 3.3s infinite ease-in-out;
+        }
+        @keyframes bgColor {
+            0% {
+                background: linear-gradient(325deg, rgba(0,50,102,1) 0%, rgb(20, 0, 62) 51%, rgb(30, 0, 255) 100%);
+            }
+            100% {
+                background: linear-gradient(325deg, rgb(1, 0, 37) 0%, rgb(4, 0, 41) 51%, rgb(0, 38, 79) 100%);
+            }
+        }
+        .scrulteDiv{
+            height: 100vh;
+        }
+        .scrulteDiv table{
+            max-width: 400px;
+        }
+        .yl{
+            color: rgb(198, 182, 0);
+        }
+        .gn{
+            color: rgb(11, 228, 0);
+        }
+        .rd{
+            color: rgb(255, 0, 0);
+        }
+        .cy{
+            color: rgb(39, 39, 39);
+        }
+        .bl{
+            color: rgb(0, 149, 255);
+        }
+
+    </style>
+</head>
+<body>
+<div class="playGameDiv d-flex flex-column justify-content-center align-items-center text-center">
+    <h1 class="m-0 pb-3 text-white fw-bold">Schulte Game</h1>
+    <button type="button" class="btn btn-lg btn-primary playGame">Play The Game</button>
+</div>
+<div class="container gameBody hidden">
+    <div class="d-flex flex-column gap-3 justify-content-center align-items-center text-center scrulteDiv">
+        <h1 class="m-0 pb-3 fw-medium">Schulte Game</h1>
+        <table class="table table-striped table-bordered">
+            <tbody>
+                <tr>
+                    <td><a href="#" class="NumgberValue fw-medium yl"></a></td>
+                    <td><a href="#" class="NumgberValue fw-medium rd"></a></td>
+                    <td><a href="#" class="NumgberValue fw-medium gn"></a></td>
+                    <td><a href="#" class="NumgberValue fw-medium bl"></a></td>
+                    <td><a href="#" class="NumgberValue fw-medium cy"></a></td>
+                </tr>
+                <tr>
+                    <td><a href="#" class="NumgberValue fw-medium gn"></a></td>
+                    <td><a href="#" class="NumgberValue fw-medium bl"></a></td>
+                    <td><a href="#" class="NumgberValue fw-medium cy"></a></td>
+                    <td><a href="#" class="NumgberValue fw-medium yl"></a></td>
+                    <td><a href="#" class="NumgberValue fw-medium rd"></a></td>
+                </tr>
+                <tr>
+                    <td><a href="#" class="NumgberValue fw-medium yl"></a></td>
+                    <td><a href="#" class="NumgberValue fw-medium rd"></a></td>
+                    <td><a href="#" class="NumgberValue fw-medium gn"></a></td>
+                    <td><a href="#" class="NumgberValue fw-medium bl"></a></td>
+                    <td><a href="#" class="NumgberValue fw-medium cy"></a></td>
+                </tr>
+                <tr>
+                    <td><a href="#" class="NumgberValue fw-medium gn"></a></td>
+                    <td><a href="#" class="NumgberValue fw-medium bl"></a></td>
+                    <td><a href="#" class="NumgberValue fw-medium cy"></a></td>
+                    <td><a href="#" class="NumgberValue fw-medium yl"></a></td>
+                    <td><a href="#" class="NumgberValue fw-medium rd"></a></td>
+                </tr>
+                <tr>
+                    <td><a href="#" class="NumgberValue fw-medium yl"></a></td>
+                    <td><a href="#" class="NumgberValue fw-medium rd"></a></td>
+                    <td><a href="#" class="NumgberValue fw-medium gn"></a></td>
+                    <td><a href="#" class="NumgberValue fw-medium bl"></a></td>
+                    <td><a href="#" class="NumgberValue fw-medium cy"></a></td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="d-flex gap-2">
+            <button type="button" class="btn btn-sm btn-success newGame">New Game</button>
+            <!-- <button type="button" class="btn btn-sm btn-success">New Game</button> -->
+        </div>
+        <div class="d-flex gap-2 text-center">
+            <div><h1>00:<span class="countDown">30</span></h1></div>
+        </div>
+    </div>
+</div>
+<style>
+    .resultBG{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 100%;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.41);
+        filter: blur(.2);
+    }
+    .resultDiv{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 300px;
+        background-color: rgb(0, 4, 47);
+        border-radius: 5px;
+        color: white;
+    }
+</style>
+<div class="resultBG hidden"></div>
+<div class="resultDiv hidden p-3 d-flex flex-column gap-3 justify-content-center align-items-center text-center">
+    <h5>Time Out! Please click Play Again to start a new game 😍</h5>
+    <button type="button" class="btn btn-sm btn-success newGameAgain">Play Again</button>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/js/all.min.js" integrity="sha512-GWzVrcGlo0TxTRvz9ttioyYJ+Wwk9Ck0G81D+eO63BaqHaJ3YZX9wuqjwgfcV/MrB2PhaVX9DkYVhbFpStnqpQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="schulte.js"></script>
+</body>
+</html>
