@@ -11,7 +11,7 @@ let newGameAgain = document.querySelector('.newGameAgain');
 
 
 const arrNum = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25];
-
+let currentScore = 1;
 const swapNum = (l1,l2) => {
     let x;
     x = arrNum[l1];
@@ -37,7 +37,11 @@ const newGameFun = ()=>{
     for(let k=0;k<25;k++){
         NumgberValue[k].textContent = arrNum[k];
     }
-    console.log(arrNum);
+    NumgberValue.forEach((el,i) => {
+        el.style.opacity = '1';
+    });
+    currentScore = 1;
+    //console.log(arrNum);
 }
 const resultGame = ()=>{
     resultBG.classList.contains('hidden')? resultBG.classList.remove('hidden'): resultBG.classList.add('hidden');
@@ -90,6 +94,13 @@ resultDiv.addEventListener('click', ()=>{
 
 
 NumgberValue.forEach((el,i) => {
-    //el.preventDeafult();
+    el.addEventListener('click', ()=>{
+        let textt = el.textContent;
+        console.log(textt);
+        if(currentScore==Number(textt)){
+            el.style.opacity = '0';
+            currentScore++;
+        }
+    });
 
 });
