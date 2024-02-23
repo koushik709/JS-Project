@@ -87,3 +87,10 @@ body{
     border-radius: 5px;
     color: white;
 }
+
+.rightClick{
+    background-color: rgb(211, 255, 211) !important;
+}
+.WrongClick{
+    background-color: rgb(255, 211, 211) !important;
+}

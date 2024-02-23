@@ -19,11 +19,7 @@ const swapNum = (l1,l2) => {
     arrNum[l2] = x;
 }
 const callSwap = ()=>{
-    //let randomNum = [Math.floor(Math.random()*25), Math.floor(Math.random()*20),Math.floor(Math.random()*15),Math.floor(Math.random()*10),Math.floor(Math.random()*5),Math.floor(Math.random()*2)];
-    //let arrNumSize = arrNum.length+1;
     for(let j=0;j<25;j++){
-        //randomNum[j]==randomNum[j+1] ? swapNum(randomNum[j],randomNum[j+1]):swapNum(randomNum[j+1],randomNum[j]);
-        //randomNum[j]==randomNum[j+2] ? swapNum(randomNum[j],randomNum[j+2]):swapNum(randomNum[j+2],randomNum[j]);
         swapNum(Math.floor(Math.random()*5), Math.floor(Math.random()*24));
     }
     let xl;
@@ -46,6 +42,7 @@ const newGameFun = ()=>{
 const resultGame = ()=>{
     resultBG.classList.contains('hidden')? resultBG.classList.remove('hidden'): resultBG.classList.add('hidden');
     resultDiv.classList.contains('hidden')? resultDiv.classList.remove('hidden'): resultDiv.classList.add('hidden');;
+    document.querySelector('.resultText').textContent = `Time Out! Your have counted till ${currentScore - 1}. Please click "Play Again" to start a new game 😍`;
 }
 let myTime;
 const countStart = ()=> {
@@ -92,15 +89,25 @@ resultDiv.addEventListener('click', ()=>{
     resultGame();
 });
 
+let scoreValue = 0;
 
 NumgberValue.forEach((el,i) => {
     el.addEventListener('click', ()=>{
         let textt = el.textContent;
-        console.log(textt);
         if(currentScore==Number(textt)){
-            el.style.opacity = '0';
             currentScore++;
+            el.closest('td').classList.add('rightClick');
+            setTimeout(function(){el.closest('td').classList.remove('rightClick');},300);
+        } else {
+            el.closest('td').classList.add('WrongClick');
+            setTimeout(function(){el.closest('td').classList.remove('WrongClick');},300);
         }
     });
-
 });
+
+
+
+
+
+
+
