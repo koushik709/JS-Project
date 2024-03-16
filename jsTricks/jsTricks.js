@@ -1,5 +1,5 @@
 //image Uploader //video uploader
-const fileInput = document.querySelectorAll('.fileInput')
+const fileInput = document.querySelectorAll('.fileInput');
 let inputImage = '';
 fileInput.forEach((el, l)=>{
     el.addEventListener('change', (e)=>{
@@ -77,6 +77,7 @@ const stickyCard = function(text){
     `;
     return cardElement;
 }
+
 document.querySelector('.stickyCardBody').addEventListener('click', function(event) {
     if (event.target.closest('.deleteSticky')) {
         const stickyCard = event.target.closest('.Stickycard');
@@ -86,15 +87,7 @@ document.querySelector('.stickyCardBody').addEventListener('click', function(eve
         }
     }
 });
-// deleteSticky.forEach((el)=>{
-//     el.addEventListener('click', (event)=>{
-//         const stickyCard = event.target.closest('.Stickycard');
-//         console.log("there is not stickyCard");
-//         if (stickyCard) {
-//             stickyCard.remove();
-//         }
-//     });
-// });
+
 function addRemove(){
     modalbg.classList.contains('hidden') ? modalbg.classList.remove('hidden') : modalbg.classList.add('hidden');
     stickyModal.classList.contains('hidden') ? stickyModal.classList.remove('hidden') : stickyModal.classList.add('hidden');
@@ -125,6 +118,50 @@ submitSticky.addEventListener('click', ()=>{
 
 
 
+// File Downloader
+const fileDownload = document.querySelector('.fileInputDownloader');
+const dwnldFileButton = document.querySelector('.downloadFile');
+
+const downloadNow = async () => {
+    try {
+        // Check if input value is empty
+        if (fileDownload.value.trim() === "") {
+            throw new Error("Please enter a valid file URL");
+        }
+
+        const getFile = await fetch(fileDownload.value);
+        const file = await getFile.blob();
+        const link = document.createElement('a');
+        link.href = URL.createObjectURL(file);
+        link.download = new Date().getTime();
+        link.click();
+    } catch (error) {
+        alert('oops this file cannot be downloaded. SORRY!!!');
+    }
+}
+
+dwnldFileButton.addEventListener('click', downloadNow);
 
 
+//Eye Dropper
 
+document.querySelector('.colorMeButton')
+.addEventListener('click', async (e)=>{
+    e.preventDefault();
+    try{
+        const drop = new EyeDropper();
+        const {sRGBHex} = await drop.open();
+        console.log(sRGBHex);
+        const colorMe = document.querySelector('.colorMe');
+        colorMe.style.backgroundColor = sRGBHex;
+        colorMe.querySelector('p').textContent = sRGBHex;
+        if(sRGBHex=="#ffffff"){
+            console.log('working');
+            e.target.style.backgroundColor = 'green';
+            e.target.style.color = 'white';
+            colorMe.querySelector('p').style.color = 'green';
+        }
+    } catch(error){
+        alert("Please check the eyedropper code again.");
+    }
+});

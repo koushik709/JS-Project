@@ -30,6 +30,8 @@ body{
 }
 .divWidth {
     max-width: 350px;
+    min-width: 350px;
+    position: relative;
 }
 .header {
     border-radius: 5px 5px 0 0;
@@ -49,4 +51,22 @@ body{
     background-position: center;
     background-size: cover;
     border-radius: 5px;
+}
+
+.colorMe {
+    width: 100%;
+    height: 100px;
+    background-color: #ccc;
+    border-radius: 5px;
+}
+
+.colorMeButton {
+    position: absolute;
+    right: 30px;
+    bottom: 20px;
+    cursor: pointer;
+    background-color: white;
+}
+#displayImageEyeDropper{
+    height: 50px;
 }
