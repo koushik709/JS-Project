@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navigator Keys Management</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jsmediatags/3.9.5/jsmediatags.min.js"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="navkeys.css">
+</head>
+<body>
+<style>
+.nav-contain-main{
+    min-height: 300px;
+    width: 500px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.nav-contain-header {
+    background-color: #93a9b8;
+}
+.head-text{
+    font-size: 18px;
+    color: #ffffff;
+}
+.filterKey,.filterKey:hover {
+    background-color: rgb(74, 154, 74);
+    color: #fff;
+}
+</style>
+<div class="container">
+    <div class="nav-container nav-container d-flex justify-content-center align-items-center mt-5">
+        <div class="nav-contain-main">
+            <div class="nav-contain-header closestKeyOption d-flex justify-content-between align-items-center px-3 py-2">
+                <h3 class="m-0 head-text">Navigator Keys Generator</h3>
+                <div class="d-flex gap-2 closestKeyOption">
+                    <select name="keysOption" id="keysOption" class="form-control">
+                        <option value="tags_style" selected>Tag_style</option>
+                        <option value="camel_style">Camel Case</option>
+                        <option value="pascal_style">Pascal Case</option>
+                    </select>
+                    <button type="button" class="btn btn-xs filterKey">
+                        set
+                    </button>
+                </div>
+            </div>
+            <div class="div-contain-body">
+                <div class="body-header d-flex justify-content-between align-items-center px-3 pt-2">
+                    <p class="m-0">Add Information</p>
+                    <div>
+                        <a href="#" class="btn btn-success btn-sm m-0 addNewRow">Add</a>
+                    </div>
+                </div>
+                <hr class="mt-2 m-0">
+                <table class="table table-bordered table-border-stripped">
+                    <thead>
+                        <tr>
+                            <th>id</th>
+                            <th>keys</th>
+                            <th>Values</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/js/all.min.js" integrity="sha512-GWzVrcGlo0TxTRvz9ttioyYJ+Wwk9Ck0G81D+eO63BaqHaJ3YZX9wuqjwgfcV/MrB2PhaVX9DkYVhbFpStnqpQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="navkeys.js"></script>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pokemon Fetch and Download</title>
+</head>
+<body>
+<input type="text" id="searchInput" placeholder="Enter Pokemon name">
+<button onclick="fetchData()">Search</button>
+<br>
+<img id="showResult" src="" alt="Pokemon Image">
+<br>
+<!-- <a id="downloadPokemon" href="#" download="pokemon.png">Download Pokemon</a> -->
+
+<script>
+let dataImage = "";
+
+async function fetchData(){
+  try{
+    const textt = document.getElementById('searchInput').value.trim().toLowerCase();
+    if(textt == ""){
+      dataImage = "";
+      alert("Please type something");
+      location.reload();
+      return; // Ensure to return after reloading
+    }
+    const pockemon = await fetch(`https://pokeapi.co/api/v2/pokemon/${textt}`);
+    if(!pockemon.ok){
+      throw new Error("This is not good");
+    }
+    const data = await pockemon.json();
+    const pokemonSpirit = data.sprites.front_default;
+    dataImage = pokemonSpirit;
+    const showResult = document.getElementById('showResult');
+    showResult.src = pokemonSpirit;
+
+  }
+  catch(error){
+    console.error(error);
+  }
+}
+
+// const downloadpok = document.getElementById('downloadPokemon');
+// downloadpok.addEventListener('click', (e) => {
+//   if (dataImage) {
+//     downloadpok.href = dataImage;
+//     console.log(dataImage);
+//     downloadpok.download = `pokemon_${new Date().getTime()}.png`;
+//   } else {
+//     alert("No image to download");
+//     e.preventDefault();
+//   }
+// });
+</script>
+</body>
+</html>

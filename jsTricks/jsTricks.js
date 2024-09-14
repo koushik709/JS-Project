@@ -160,6 +160,8 @@ document.querySelector('.colorMeButton')
             e.target.style.backgroundColor = 'green';
             e.target.style.color = 'white';
             colorMe.querySelector('p').style.color = 'green';
+        }else{
+            colorMe.querySelector('p').style.color = '#ffffff';
         }
     } catch(error){
         alert("Please check the eyedropper code again.");
