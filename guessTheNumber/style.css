@@ -46,7 +46,7 @@ ol ul {
     /* display: none; */
 }
 .guessTheNumber .welcomePage .welcomePageBody {
-    background: url(/guessTheNumber/bg.png);
+    background: url(bg.png);
     width: 390px;
     height: 600px;
 }
