@@ -42,7 +42,7 @@ const newGameFun = ()=>{
 const resultGame = ()=>{
     resultBG.classList.contains('hidden')? resultBG.classList.remove('hidden'): resultBG.classList.add('hidden');
     resultDiv.classList.contains('hidden')? resultDiv.classList.remove('hidden'): resultDiv.classList.add('hidden');;
-    document.querySelector('.resultText').textContent = `Time Out! Your have counted till ${currentScore - 1}. Please click "Play Again" to start a new game 😍`;
+    document.querySelector('.resultText').textContent = `Time Out! You have counted till ${currentScore - 1}. Please click "Play Again" to start a new game 😍`;
 }
 let myTime;
 const countStart = ()=> {
@@ -66,6 +66,11 @@ const countStart = ()=> {
 }
 newGame.onclick = function(){
     countDown.innerHTML = `30`;
+    document.querySelectorAll('td')
+    .forEach(el=>{
+        el.classList.remove('rightClick');
+        el.classList.remove('WrongClick');
+    });
     newGameFun();
     countStart();
 }
@@ -97,15 +102,28 @@ NumgberValue.forEach((el,i) => {
         if(currentScore==Number(textt)){
             currentScore++;
             el.closest('td').classList.add('rightClick');
-            setTimeout(function(){el.closest('td').classList.remove('rightClick');},300);
+            setTimeout(function(){el.closest('td').classList.remove('WrongClick');},300);
+            if(currentScore==25){
+                resultBG.classList.contains('hidden')? resultBG.classList.remove('hidden'): resultBG.classList.add('hidden');
+                resultDiv.classList.contains('hidden')? resultDiv.classList.remove('hidden'): resultDiv.classList.add('hidden');;
+                document.querySelector('.resultText').textContent = `WOW! Your have counted till ${currentScore - 1}. Please click "Play Again" to start a new game 😍`;
+            }
         } else {
             el.closest('td').classList.add('WrongClick');
-            setTimeout(function(){el.closest('td').classList.remove('WrongClick');},300);
+            setTimeout(function(){el.closest('td').classList.remove('rightClick');},300);
         }
     });
 });
 
-
+newGameAgain.addEventListener('click', ()=>{
+    document.querySelectorAll('td')
+    .forEach(el=>{
+        el.classList.remove('rightClick');
+        el.classList.remove('WrongClick');
+    });
+    newGameFun();
+    countStart();
+});
 
 
 

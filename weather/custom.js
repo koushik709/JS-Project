@@ -30,3 +30,21 @@ document.querySelector('button').addEventListener('click', () => {
         checkWeather(inputCheck.value);
     }
 });
+
+const urlofphoto = 'https://jsonplaceholder.typicode.com/photos';
+async function photoData(erl) {
+    const response = await fetch(erl);
+    const data = await response.json();
+    //console.log(data[0].url);
+    //console.log(data);
+    const thumid = data.filter(el => el.albumId==1);
+    console.log(thumid);
+    const newimg = document.createElement('div');
+    newimg.style.background = `url(${thumid[1].thumbnailUrl})`;
+    newimg.style.width = `${150}px`;
+    newimg.style.height = `${150}px`;
+    console.log(newimg);
+    document.body.append(newimg);
+}
+
+//photoData(urlofphoto);

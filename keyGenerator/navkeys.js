@@ -38,7 +38,7 @@ tBody.addEventListener('click', (event) => {
     if (event.target.classList.contains('removeRow') && removeRowlength.length != 1) {
         event.target.closest('tr').remove();
     }
-    if(removeRowlength.length == 1){
+    if(event.target.classList.contains('removeRow') && removeRowlength.length == 1){
         alert('You can not delete the last row. Thank you.');
     }
 });
