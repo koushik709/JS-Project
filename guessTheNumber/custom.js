@@ -58,7 +58,7 @@ inputNumber.addEventListener('input', () => {
 submitNumber.addEventListener('click', () => {
     let inputValue = Number(inputNumber.value);
     console.log(typeof inputValue, "Moves left = " + movesValue);
-    if (inputValue < 1 || inputValue > 10) {
+    if (inputValue < 1 || inputValue > 10 || isNaN(inputValue)) {
         displayMessage('Please enter a number between 1 and 10', '#ff0000');
         console.log('Invalid input!');
         return;
