@@ -1,4 +1,4 @@
-const inputCheck = document.querySelector('input');
+
 const apiKey = "5e6959cd9138f96dfc7928f7220db482";
 const apiUrl = "https://api.openweathermap.org/data/2.5/weather?units=metric&q="
 async function checkWeather(city){
@@ -22,6 +22,8 @@ async function checkWeather(city){
     document.querySelector('.windValue').innerHTML = data.wind.speed + " km/h";
 }
 document.querySelector('button').addEventListener('click', () => {
+    const inputCheck = document.querySelector('#cityInput');
+    console.log("input value: ",inputCheck);
     if(inputCheck.value == ""){
         alert("Please type something");
     } else {
